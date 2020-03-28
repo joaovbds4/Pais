@@ -85,7 +85,7 @@ public class PaisDAO {
 	
 	
 	public void Update(Pais pais) {
-		String sqlUpdate = "UPDATE pais SET nome=?, populacao=?, area=? WHERE id=?";
+		String sqlUpdate = "UPDATE pais SET nome=?, populacao=?, area_total=? WHERE id=?";
 		
 		try (PreparedStatement pst = conexao.prepareStatement(sqlUpdate)){
 			pst.setString(1, pais.getNome());
